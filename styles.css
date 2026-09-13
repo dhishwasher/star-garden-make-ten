@@ -1,0 +1,31 @@
+:root{--bg:#f4f8ff;--ink:#1a2433;--accent:#2f6fed;--ok:#1b7f4a;--warn:#9a5b00;--slot:#dbe7ff;--counter:#ff8a3d;--focus:#111;--muted:#5b6b82}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.4}
+body{min-height:100vh}
+.wrap{max-width:920px;margin:0 auto;padding:16px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
+h1{font-size:clamp(1.4rem,4vw,2rem);margin:0}
+.nav{display:flex;flex-wrap:wrap;gap:8px}
+button,.btn{min-height:48px;min-width:48px;padding:10px 14px;border-radius:12px;border:2px solid #234;background:#fff;font-size:1rem;cursor:pointer}
+button:focus-visible,.btn:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+button.primary{background:var(--accent);color:#fff;border-color:#1d4bb8}
+button.ok{background:var(--ok);color:#fff;border-color:#146038}
+button:disabled{opacity:.5;cursor:not-allowed}
+.panel{background:#fff;border:2px solid #c9d7f0;border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 6px 18px rgba(26,36,51,.06)}
+.muted{color:var(--muted)}
+.tenframe{display:grid;grid-template-columns:repeat(5,minmax(48px,1fr));gap:8px;max-width:420px}
+.slot{aspect-ratio:1;border:2px dashed #7a93c4;border-radius:12px;background:var(--slot);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.slot.filled{background:#ffe2cc;border-style:solid;border-color:#d66a1f}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.big{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:800}
+.feedback{min-height:1.5em;font-weight:600}
+.feedback.ok{color:var(--ok)}.feedback.bad{color:#9b1c1c}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.progress{display:flex;gap:6px;flex-wrap:wrap}
+.dot{width:14px;height:14px;border-radius:50%;background:#c5d2ea}
+.dot.on{background:var(--accent)}
+.eq{font-family:ui-monospace,Menlo,monospace;font-size:1.3rem}
+.tray{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-width:48px;min-height:48px;border-radius:999px;border:2px solid #234;background:var(--counter);color:#1a1208;font-weight:700}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:360px){.tenframe{gap:6px}.wrap{padding:10px}}
