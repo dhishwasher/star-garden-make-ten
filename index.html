@@ -4,10 +4,52 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Star Garden: Make Ten</title>
+<link rel="stylesheet" href="styles.css"/>
+
 </head>
 <body>
-<h1>Star Garden: Make Ten</h1>
-<p>Taskmarket TSK-B1MHHF16 submission package is in this repo. Full interactive lesson file was uploaded to Taskmarket as final artifact <code>index.html</code>.</p>
-<p>Repo: <a href="https://github.com/dhishwasher/star-garden-make-ten">dhishwasher/star-garden-make-ten</a></p>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Star Garden: Make Ten</h1>
+    <p class="muted" id="tagline">A short number lesson for about age 6. Objects first, then equations.</p>
+  </div>
+  <div class="row">
+    <label>Help level
+      <select id="scaffold" aria-label="Help level">
+        <option value="more">More hints</option>
+        <option value="less">Fewer hints</option>
+      </select>
+    </label>
+    <button type="button" id="resetAll">Reset lesson</button>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Lesson steps">
+  <button type="button" data-go="home" class="primary">Start</button>
+  <button type="button" data-go="build">1. Build</button>
+  <button type="button" data-go="bond">2. Make ten</button>
+  <button type="button" data-go="story">3. Stories</button>
+  <button type="button" data-go="summary">Summary</button>
+</nav>
+<div class="progress" aria-label="Progress" id="progress"></div>
+
+<section id="view" class="panel" aria-live="polite"></section>
+
+<details class="panel">
+  <summary>Adult guide &amp; sources</summary>
+  <p><strong>Objectives:</strong> match numerals 0–10 to quantities; compose ten with number bonds; model addition/subtraction within ten using counters before equations.</p>
+  <p><strong>Prerequisites:</strong> counting to ten with one-to-one correspondence; adult nearby for read-aloud if needed.</p>
+  <p><strong>Session:</strong> about 8–12 minutes. Free, no login, no tracking. Progress stays in this browser only (localStorage). Use Reset lesson to clear.</p>
+  <p><strong>Sources:</strong></p>
+  <ul>
+    <li>NCTM Illuminations — Ten Frame activities (composition of ten): <span class="muted">https://illuminations.nctm.org/</span></li>
+    <li>What Works Clearinghouse / IES practice guides on early mathematics (concrete representations before symbols): <span class="muted">https://ies.ed.gov/ncee/wwc/</span></li>
+  </ul>
+  <p class="muted">This lesson is practice, not a diagnosis. It does not claim validated learning gains for every child.</p>
+</details>
+</div>
+<script src="app.js"></script>
+
 </body>
 </html>
